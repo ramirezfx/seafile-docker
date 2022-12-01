@@ -1,4 +1,4 @@
-FROM ramirezfx/ubuntu-mate-iso:kinetic
+FROM ubuntu:rolling
 
 COPY ./keyboard /etc/default/keyboard
 
