@@ -5,7 +5,7 @@ HOME="$(echo ~)"
 set -e
 
 if [[ -n "$(docker ps -qaf 'name=ramirezfx/seafile:latest-at')" ]]; then
-	docker restart ramirezfx/seafile:latest-at
+	docker restart ramirezfx/seafile:latest-en
 else
 	USER_UID=$(id -u)
 	USER_GID=$(id -g)
@@ -21,5 +21,5 @@ else
 		--volume=/tmp/.X11-unix:/tmp/.X11-unix:ro \
 		--volume=/run/user/$USER_UID/pulse:/run/pulse:ro \
 		--name seafile \
-		ramirezfx/seafile:latest-at
+		ramirezfx/seafile:latest-en
 fi
