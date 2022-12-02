@@ -4,7 +4,7 @@ HOME="$(echo ~)"
 
 set -e
 
-if [[ -n "$(docker ps -qaf 'name=ramirezfx/seafile:latest-at')" ]]; then
+if [[ -n "$(docker ps -qaf 'name=ramirezfx/seafile:latest-en')" ]]; then
 	docker restart ramirezfx/seafile:latest-en
 else
 	USER_UID=$(id -u)
